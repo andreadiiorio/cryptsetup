@@ -45,7 +45,7 @@ int crypt_pbkdf_get_limits(const char *kdf, struct crypt_pbkdf_limits *limits)
 		limits->max_iterations = UINT32_MAX;
 		limits->min_memory     = 32;      /* hard limit */
 		limits->min_bench_memory=64*1024; /* 64 MiB minimum for benchmark */
-		limits->max_memory     = 4*1024*1024; /* 4GiB */
+		limits->max_memory     = 64*1024*1024; /* 64GiB */
 		limits->min_parallel   = 1;
 		limits->max_parallel   = 4;
 		return 0;
